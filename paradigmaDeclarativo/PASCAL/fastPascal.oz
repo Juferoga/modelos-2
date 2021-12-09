@@ -1,4 +1,4 @@
-declare  AddList ShifLeft ShifRight Pascal
+declare  AddList ShifLeft ShifRight 
 
 fun {ShiftLeft L}
    case L of H|T then
@@ -17,17 +17,14 @@ fun {AddList L1 L2}
    else nil end
 end
 
-
-fun {Pascal N}
-     
- %  C := @C + 1
-  % {Browse @C}
-   if N==1 then [1]
-   else
-      {AddList
-       {ShiftLeft {Pascal N-1}}
-       {ShiftRight {Pascal N-1}}}
-   end
+fun {FastPascal N}
+    if N==1 then [1]
+    else
+        local L in
+            L={FastPascal N-1}
+            {AddList {ShiftLeft L} {ShiftRight L} }
+        end
+    end
 end
 
-{Browse {Pascal 10}}
+{Browse {FastPascal 30}}
