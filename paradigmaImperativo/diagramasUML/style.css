@@ -1,0 +1,162 @@
+body {
+  background-color: OldLace;
+  color: #404040;
+  font-family: serif;
+}
+
+h1 {
+  font-size: 7em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 1px;
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 2.5em;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 2em;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+h5 {
+  font-size: 1.7em;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+blockquote {
+  font-size: 0.8em;
+  margin-left: 0px;
+  margin-right: 0px;
+  line-height: 1.2em;
+  font-style: italic;
+}
+
+article {
+  line-height: 1.2em;
+  hyphens: auto;
+  columns: 3;
+  column-gap: 40px;
+  column-rule: thin solid #404040;
+}
+
+p {
+  text-align: justify;
+}
+
+.fecha {
+  text-transform: uppercase;
+  text-weight: bold;
+  font-size: 1.8em;
+  text-align: center;
+  border-top: medium solid #404040;
+  border-bottom: medium solid #404040;
+  padding-top: 8px;
+  padding-bottom:8px;
+}
+
+a{
+  text-decoration: none;
+  color: #333;
+  text-transform: lowercase;
+  font-size: 30px;
+}
+
+.centrado-subtitulo {
+  display: flex;
+  font-weight: bolder;
+  justify-content: center;
+  font-size: 3em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.titulos{
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.logo-uml{
+  margin-bottom: 20px;
+}
+
+#notification {
+	position: absolute;
+	top: 2rem;
+	right: 0;
+	background: OldLace;
+	border: 1px solid rgba(0, 0, 0, 0.13);
+	box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.07);
+	border-radius: 3px;
+	padding: 2rem 4rem 2rem 2rem;
+}
+
+	#notification:after {
+		content: "";
+		display: block;
+		width: 5px;
+		height: 100%;
+		background-color: red;
+		position: absolute;
+		left: 0;
+		top: 0;
+		border-radius: 2px 0 0 2px;
+	}
+
+	#notification p {
+		margin: 0 0 1rem 0;
+	}
+
+  #notification p:last-child {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+@keyframes slideLeft {
+	0%, 100% {
+		transform: translate3d(100%, 0, 0);
+	}
+	10%, 90% {
+		transform: translate3d(-2rem, 0, 0);
+	}
+}
+
+#notification {
+	transform: translate3d(100%, 0, 0);
+	animation: slideLeft 5s 1s 1 cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+small{
+  display: flex;
+  text-align: center;
+}
+
+.side-img{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 12px;
+}
+
+.blockquote {
+  font-size: 0.8em;
+  padding-left: 12px;
+  margin-right: 0px;
+  line-height: 1.2em;
+  font-style: italic;
+  text-decoration: underline;
+}
